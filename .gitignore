@@ -1,0 +1,4 @@
+.djangoenv
+db.sqlite3
+myapp
+myproject/__pycache__
