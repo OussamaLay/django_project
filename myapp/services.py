@@ -1,11 +1,14 @@
 # stocks/services.py
 
 import requests
+import os
+from dotenv import load_dotenv
 
-# Définissez votre clé d'accès à l'API
-API_KEY = "a5324289a5b3d5b8cac489922e91e461"  # Remplacez par votre clé réelle
+# Charger le fichier .env
+load_dotenv()
 
-# URL de base de l'endpoint EOD
+# Récupérer la clé API depuis les variables d'environnement
+API_KEY = os.getenv("API_KEY")
 API_URL = "http://api.marketstack.com/v1/eod"
 
 def fetch_market_data(symbols="AAPL"):
