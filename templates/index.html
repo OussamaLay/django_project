@@ -158,6 +158,42 @@
   </section>
   <!-- end welcome section -->
 
+  <!-- market data section --> 
+  <section class="market-data-section" style="margin: 2em 0;"> <!-- Ajoute un espace de 2em en haut et en bas -->
+    <div class="container">
+      <h2>Données journalière des produits disponibles en stock</h2>
+      {% if market_data %}
+        <table border="1" style="width: 100%; border-collapse: collapse;">
+          <thead style="background-color: #507c34; color: #fff;">
+            <tr>
+              <th>ID catégorie</th>
+              <th>Code produit</th>
+              <th>Prix de vente de départ</th>
+              <th>Prix de vente actuel</th>
+              <th>Quantité disponible</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for item in market_data %}
+              <tr>
+                <td>{{ item.categorie }}</td>
+                <td>{{ item.produit }}</td>
+                <td>{{ item.open }}</td>
+                <td>{{ item.close }}</td>
+                <td>{{ item.volume|floatformat:0|slice:"0:4" }}</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      {% else %}
+        <p>Aucune donnée de marché disponible.</p>
+      {% endif %}
+    </div>
+  </section>
+  <!-- end market data section -->
+
+
+
   <!-- service section -->
 
   <section class="service_section">

@@ -1,0 +1,37 @@
+<!-- stocks/templates/stocks/market_data.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Données du Marché</title>
+</head>
+<body>
+    <h1>Données du Marché pour AAPL</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Symbole</th>
+                <th>Date</th>
+                <th>Ouverture</th>
+                <th>Clôture</th>
+                <th>Volume</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in market_data %}
+            <tr>
+                <td>{{ item.symbol }}</td>
+                <td>{{ item.date }}</td>
+                <td>{{ item.open }}</td>
+                <td>{{ item.close }}</td>
+                <td>{{ item.volume }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="5">Aucune donnée disponible.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,5 +1,7 @@
 from django.urls import path
 from . import views
+from .views import market_data_view
+
 urlpatterns =[
     path('' , views.index, name='index'),
      path('contact.html' , views.contact, name='contact'),
@@ -12,6 +14,6 @@ urlpatterns =[
      path('map.html' , views.map, name='map'),
      path('connexion.html' , views.map, name='connexion'),
      path('click.html' , views.click, name='click'),
-
+     path("market_data.html", market_data_view, name="market_data"),
 
 ]
