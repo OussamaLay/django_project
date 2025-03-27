@@ -130,6 +130,7 @@ def run_model(train_data, test_data, model, model_name):
 def load_original_df():
     #load in original dataframe without scaling applied
     original_df = pd.read_csv('C:/Users/NABIL/neuro/projet/myproject/train.csv')
+    original_df = pd.read_csv(r'..\neuro\train.csv')
     original_df.date = original_df.date.apply(lambda x: str(x)[:-3])
     original_df = original_df.groupby('date')['sales'].sum().reset_index()
     original_df.date = pd.to_datetime(original_df.date)

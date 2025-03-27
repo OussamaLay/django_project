@@ -1,0 +1,11 @@
+Code_Produit,Nom_Produit,Catégorie,Stock,Prix_Vente_Avant,Prix_Vente_Après
+PROD-1000,Pâtes,Épicerie,443,1.2,1.35
+PROD-1001,Riz,Épicerie,390,1.0,1.15
+PROD-1002,Lait,Produits Laitiers,256,0.9,0.95
+PROD-1003,Yaourt,Produits Laitiers,470,1.5,1.6
+PROD-1004,Bananes,Fruits,362,1.8,2.0
+PROD-1005,Pommes,Fruits,209,2.2,2.3
+PROD-1006,Tomates,Légumes,179,1.5,1.65
+PROD-1007,Carottes,Légumes,493,1.1,1.2
+PROD-1008,Poulet,Viande,268,6.5,6.9
+PROD-1009,Œufs,Produits Laitiers,462,2.5,2.7
